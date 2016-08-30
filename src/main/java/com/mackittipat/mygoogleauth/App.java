@@ -19,6 +19,10 @@ public class App {
         // Hide Java coffee cup icon from Dock in Mac OS.
         System.setProperty("apple.awt.UIElement", "true");
 
+        System.out.println("=============== my-google-auth ==============");
+        System.out.println("https://github.com/MacKittipat/my-google-auth");
+
+
         // Read config file.
         String filePath = args[0];
         InputStream input;
@@ -37,6 +41,7 @@ public class App {
         // Generate OTP.
         Totp totp = new Totp(secret);
         String opt = totp.now();
+        System.out.println("===== OPT =====");
         System.out.println(opt);
 
         // Copy OTP to clipboard.
