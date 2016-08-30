@@ -16,6 +16,10 @@ import java.util.Map;
 public class App {
     public static void main( String[] args ) {
 
+        // Hide Java coffee cup icon from Dock in Mac OS.
+        System.setProperty("apple.awt.UIElement", "true");
+
+        // Read config file.
         String filePath = args[0];
         InputStream input;
         try {
@@ -30,12 +34,12 @@ public class App {
         String secret = data.get("secret");
         String prefixPwd = data.get("prefix-password");
 
-        // Generate OTP
+        // Generate OTP.
         Totp totp = new Totp(secret);
         String opt = totp.now();
         System.out.println(opt);
 
-        // Copy to clipboard.
+        // Copy OTP to clipboard.
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         Transferable transferable = new StringSelection(prefixPwd + opt);
         clipboard.setContents(transferable, null);
