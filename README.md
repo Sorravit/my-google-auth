@@ -8,7 +8,16 @@ Generate OTP from command line instead of Google Authenticator in mobile phone.
 
 # Config file 
 
+- secret : Your secret key
+- prefix-password (Optional) : Your static password. I recommend you leave it blank.
+
+## Example 
+
 ```yaml
 secret: ''
 prefix-password: ''
 ```
+
+# Credit
+
+This is the library that I use for generating OTP : https://github.com/aerogear/aerogear-otp-java
