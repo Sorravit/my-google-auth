@@ -1,6 +1,11 @@
 # my-google-auth
 Generate OTP from command line instead of Google Authenticator in mobile phone.
 
+#To use the program
+you can either
+```clone the repo and run mvn package```
+or download the complied version from https://github.com/Sorravit/my-google-auth/blob/master/CompliedVersion/my-google-auth.jar
+
 # How to use
 1. Store secret in file for example `/home/mac/config`
 2. Run `java -jar my-google-auth.jar /home/mac/config`
